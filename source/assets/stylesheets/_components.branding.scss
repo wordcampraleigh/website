@@ -53,6 +53,8 @@
   font-weight: $bold;
   color: $color-text-strong;
 
+  position: static;
+
   &::before
   &::after {
     display: none;
