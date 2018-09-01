@@ -99,3 +99,12 @@ img.wp-smiley, img.emoji {
     background-color: transparent;
   }
 }
+
+.googlemaps {
+  clear: both;
+
+  iframe {
+    width: 100%;
+    margin-top: 1.5rem;
+  }
+}
