@@ -68,6 +68,17 @@ h1 {
     background: $color-text-heading-3;
   }
 
+  &.site-title {
+
+    &::before,
+    &::after {
+
+      display: none;
+
+    }
+    
+  }
+
 }
 
 h2 {
