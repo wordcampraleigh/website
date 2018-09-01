@@ -52,6 +52,11 @@
   font-family: $font-headline;
   font-weight: $bold;
   color: $color-text-strong;
+  
+  &::before
+  &::after {
+    display: none;
+  }
 
   a {
 
@@ -93,11 +98,6 @@
 
   }
 
-  &::before
-  &::after {
-    display: none;
-  }
-  
 }
 
 .site-description {

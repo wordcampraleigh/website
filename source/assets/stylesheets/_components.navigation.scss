@@ -182,7 +182,10 @@
 .menu-item {
 
   position: relative;
-  float: none;
+
+  &, .page-navigation-container & {
+    float: none;
+  }
 
   margin: 0;
   display: block;
