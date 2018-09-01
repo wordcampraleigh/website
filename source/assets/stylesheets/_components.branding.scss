@@ -52,10 +52,10 @@
   font-family: $font-headline;
   font-weight: $bold;
   color: $color-text-strong;
-  
+
   &::before
   &::after {
-    display: none;
+    display: none !important;
   }
 
   a {
