@@ -5,19 +5,26 @@
 //
 // Write about your typography choices for this WordCamp.
 //
-// **Typeface Name** is used as the font for WordCamp logo and for all headlines.
+// **Unica One** is used as the font for WordCamp logo and for all headlines.
 //
-// **Typeface Name** is used for body text, buttons, forms etc.
+// **Hind** is used for body text, buttons, forms etc.
 //
 // Style guide: 1.typography
+
+@import url('https://fonts.googleapis.com/css?family=Hind|Unica+One');
+
+/// Hind font stack.
+$hind: "Hind", "Helvetica Neue", "Helvetica", sans-serif;
+// Unica font stack.
+$unica: "Unica One", sans-serif;
 
 /* Modular scale */
 $ms-base: 1em;
 $ms-ratio: 1.25;
 
 /* Fonts */
-$font-brand-primary:              $helvetica;
-$font-brand-secondary:            $helvetica;
+$font-brand-primary:              $hind;
+$font-brand-secondary:            $unica;
 
 /* Font use case */
 $font-body:                       $font-brand-primary;

@@ -19,7 +19,7 @@
 
 .site-header {
 
-  background-color: $color-brand-tertiary;
+  // background-color: $color-brand-tertiary;
 
 }
 
@@ -28,7 +28,10 @@
   position: relative; // Add position: relative to keep the light beams from leaking out
   overflow: hidden; // Add overflow: hidden to keep light beams from leaking out
 
-  @include container-padding(1.5);
+  width: 100%;
+  padding-top: 48%;
+
+  // @include container-padding(1.5);
 
   text-align: center;
 
@@ -52,28 +55,34 @@
 
   a {
 
+    overflow: hidden;
+    text-indent: -100em;
+    text-align: left;
+
+    position: absolute;
+
     display: block;
-    color: $color-link-hover;
-
-    &:hover,
-    &:focus,
-    &:active {
-
-      color: $color-link;
-      text-decoration: none;
-
-    }
+    width: 380px;
+    max-width: 60%;
+    height: 380px;
+    left: 50%;
+    top: 50%;
+    transform: translate3d(-50%, -50%, 0);
 
   }
 
-  a:before {
+  a::before {
+    display: none;
+  }
+
+  a::after {
 
     display: block;
-    width: ($site-logo-width * $site-logo-proportion);
-    height: ($site-logo-height * $site-logo-proportion);
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: $unit-s;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
 
     background-repeat: no-repeat;
     background-position: 50% 50%;
@@ -88,6 +97,7 @@
 
 .site-description {
 
+  display: none;
   margin: 0;
   margin-top: $unit-xs;
 

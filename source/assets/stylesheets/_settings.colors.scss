@@ -214,10 +214,10 @@
 
 /* Brand */
 
-$color-brand-primary:             #d3461f;
-$color-brand-secondary:           #00b09c;
-$color-brand-tertiary:            #1d242a;
-$color-brand-quaternary:          #222;
+$color-brand-primary:             #303f9f;
+$color-brand-secondary:           #ffc107;
+$color-brand-tertiary:            #4caf50;
+$color-brand-quaternary:          #e91e63;
 
 @include cc($color-brand-primary, 'color-brand-primary');
 @include cc($color-brand-secondary, 'color-brand-secondary');
@@ -229,12 +229,12 @@ $color-brand-quaternary:          #222;
  * Text
  */
 
-$color-text:                      rgba(0,0,0,.75);
-$color-text-weak:                 rgba(0,0,0,.6);
-$color-text-strong:               rgba(0,0,0,.9);
+$color-text:                      #37474f;
+$color-text-weak:                 #455a64;
+$color-text-strong:               #263238;
 $color-text-invert:               rgba(255,255,255,.75);
 $color-text-weak-invert:          rgba(255,255,255,.6);
-$color-text-strong-invert:        rgba(255,255,255,.9);
+$color-text-strong-invert:        #eceff1;
 
 @include cc($color-text, 'color-text');
 @include cc($color-text-weak, 'color-text-weak');
@@ -263,7 +263,7 @@ $color-link-visited:         tint($color-link, 20%);
  * Alternate links
  */
 
-$color-link-alt:             $color-brand-secondary;
+$color-link-alt:             $color-brand-tertiary;
 $color-link-alt-hover:       mix($color-link-alt, #000, 90%);
 $color-link-alt-focus:       mix($color-link-alt, #000, 70%);
 $color-link-alt-visited:     mix($color-link-alt, #fff, 50%);
@@ -278,16 +278,16 @@ $color-link-alt-visited:     mix($color-link-alt, #fff, 50%);
  * Shades of grey
  */
 
-$color-grey-10:                   tint($color-brand-tertiary, 90%); // Light
-$color-grey-20:                   tint($color-brand-tertiary, 80%);
-$color-grey-30:                   tint($color-brand-tertiary, 70%);
-$color-grey-40:                   tint($color-brand-tertiary, 60%);
-$color-grey-50:                   tint($color-brand-tertiary, 50%);
-$color-grey-60:                   tint($color-brand-tertiary, 40%);
-$color-grey-70:                   tint($color-brand-tertiary, 30%);
-$color-grey-80:                   tint($color-brand-tertiary, 20%);
-$color-grey-90:                   tint($color-brand-tertiary, 10%);
-$color-grey-100:                  tint($color-brand-tertiary, 0%);  // Dark
+$color-grey-10:                   #eceff1; // Light
+$color-grey-20:                   #cfd8dc;
+$color-grey-30:                   #b0bec5;
+$color-grey-40:                   #90a4ae;
+$color-grey-50:                   #78909c;
+$color-grey-60:                   #607d8b;
+$color-grey-70:                   #546e7a;
+$color-grey-80:                   #455a64;
+$color-grey-90:                   #37474f;
+$color-grey-100:                  #263238;  // Dark
 
 @include cc($color-grey-10, 'color-grey-10');
 @include cc($color-grey-20, 'color-grey-20');
@@ -318,10 +318,10 @@ $color-border-strong:             $color-grey-30;
  * Messages
  */
 
-$color-message-default:           #eeeeee;
-$color-message-success:           #00a664;
-$color-message-warning:           #ffcb05;
-$color-message-danger:            #f04e3e;
+$color-message-default:           $color-grey-10;
+$color-message-success:           $color-brand-tertiary;
+$color-message-warning:           $color-brand-secondary;
+$color-message-danger:            #d50000;
 
 @include cc($color-message-default, 'color-message-default');
 @include cc($color-message-success, 'color-message-success');
@@ -335,7 +335,7 @@ $color-message-danger:            #f04e3e;
 
 $color-input-regular:             $color-border-strong;
 $color-input-focus:               $color-brand-primary;
-$color-input-success:             #00a664;
+$color-input-success:             $color-brand-tertiary;
 $color-input-error:               $color-message-danger;
 $color-input-required:            mix($color-message-danger, #000, 75%);
 $color-input-checkbox:            $color-border-strong;
@@ -363,7 +363,7 @@ $color-button-regular-hover:      $color-grey-20;
 $color-button-primary:            $color-brand-primary;
 $color-button-primary-hover:      shade($color-button-primary, 10%);
 $color-button-secondary:          $color-brand-secondary;
-$color-button-secondary-hover:    shade($color-button-secondary, 10%);
+$color-button-secondary-hover:    tint($color-button-secondary, 20%);
 $color-button-invert:             #fff;
 $color-button-invert-hover:       mix($color-button-invert, #000, 90%);
 $color-button-inactive:           #eeeeee;
@@ -373,9 +373,9 @@ $color-button-inactive:           #eeeeee;
  * Helper colors
  */
 
-$color-text-heading-1:            $color-brand-tertiary;
-$color-text-heading-2:            $color-text-strong;
-$color-text-heading-3:            $color-text-strong;
+$color-text-heading-1:            $color-brand-primary;
+$color-text-heading-2:            $color-brand-tertiary;
+$color-text-heading-3:            $color-brand-quaternary;
 $color-text-heading-4:            $color-text-strong;
 $color-text-paragraph:            $color-text;
 
@@ -384,6 +384,6 @@ $color-text-paragraph:            $color-text;
  * Explicit colors
  */
 
-$color-explicit-red:              #ed1c24;
-$color-explicit-green:            #00a651;
-$color-explicit-blue:             #034ea2;
+$color-explicit-red:              $color-message-danger;
+$color-explicit-green:            $color-message-success;
+$color-explicit-blue:             $color-brand-primary;

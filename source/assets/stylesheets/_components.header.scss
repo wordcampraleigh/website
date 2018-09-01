@@ -18,6 +18,8 @@
   background-size: fixed;
   background-image: $site-hero-path-small;
 
+  margin-bottom: 3.33rem;
+
   @include breakpoint(medium) {
 
     background-image: $site-hero-path-large;

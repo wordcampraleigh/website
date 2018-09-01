@@ -5,18 +5,18 @@
  */
 
 /* Define basic variables and colors */
-$styleguide-color-main: #FF9505;
-$styleguide-color-link: #EC4E20;
-$styleguide-color-link-alt: red;
-$styleguide-color-weak: rgba(0,0,0,.7);
-$styleguide-color-strong: rgba(0,0,0,.9);
+$styleguide-color-main: $color-brand-primary;
+$styleguide-color-link: $color-brand-primary;
+$styleguide-color-link-alt: $color-brand-secondary;
+$styleguide-color-weak: $color-text-weak;
+$styleguide-color-strong: $color-text-strong;
 $styleguide-border-radius-small: 3px;
 
 .kss-doc-title {
 
   margin-bottom: rem(24);
 
-  @include font-size(18);
+  @include font-size(24);
   line-height: 1.5;
   color: $styleguide-color-strong;
   text-transform: none;
@@ -110,20 +110,12 @@ $styleguide-border-radius-small: 3px;
 
     margin-bottom: rem(24);
 
-    @include font-size(16);
+    @include font-size(24);
     line-height: 1.5;
-    font-family: $helvetica;
+    font-family: $font-brand-secondary;
     font-weight: $bold;
     color: #444;
     text-transform: none;
-
-    @include breakpoint(small) {
-
-      @include font-size(20);
-      line-height: 1.5;
-
-    }
-
   }
 
   .kss-title__permalink {
@@ -154,7 +146,7 @@ $styleguide-border-radius-small: 3px;
     @include font-size(16);
     line-height: 1.5;
     font-weight: $bold;
-    font-family: $helvetica;
+    font-family: $font-brand-secondary;
     color: rgba(0,0,0,.9);
 
     border-left: 4px solid $styleguide-color-main;
@@ -176,6 +168,9 @@ $styleguide-border-radius-small: 3px;
     margin-top: rem(24);
     margin-bottom: rem(24);
     @include clearfix();
+    
+    position: relative;
+    z-index: 1;
 
     // &:last-child {
 
@@ -194,7 +189,7 @@ $styleguide-border-radius-small: 3px;
     @include font-size(14);
     line-height: 1.5;
     font-weight: $bold;
-    font-family: $helvetica;
+    font-family: $font-brand-primary;
     color: rgba(0,0,0,.9);
 
   }
@@ -206,7 +201,7 @@ $styleguide-border-radius-small: 3px;
     @include font-size(14);
     line-height: 1.5;
     font-weight: $regular;
-    font-family: $helvetica;
+    font-family: $font-brand-primary;
     color: rgba(0,0,0,.7);
 
   }
@@ -270,7 +265,7 @@ $styleguide-border-radius-small: 3px;
   > p,
   > ul li {
 
-    font-family: $helvetica;
+    font-family: $font-brand-primary;
     @include font-size(16);
     line-height: 1.5;
     color: #444;

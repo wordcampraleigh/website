@@ -11,7 +11,7 @@
 
 .wcpt-schedule {
 
-  border: rem(4) solid $color-brand-secondary;
+  box-shadow: $box-shadow-medium;
   margin-bottom: $unit-default;
   background-color: #fff;
 
@@ -19,7 +19,7 @@
   th {
 
     vertical-align: top;
-    border-color: $color-border-normal;
+    border-color: $color-border-weak;
 
   }
 
@@ -27,8 +27,8 @@
   .wcpt-col-track {
 
     border-top: none;
-    background-color: $color-brand-tertiary;
-    color: $color-text-strong-invert;
+    background-color: $color-brand-secondary;
+    color: $color-text-strong;
 
   }
 
@@ -113,6 +113,13 @@
     a {
 
       color: $color-text;
+      text-decoration: none;
+
+      &:hover,
+      &:focus,
+      &:active {
+        text-decoration: underline double;
+      }
 
     }
 
@@ -129,7 +136,7 @@
     &.morning-break,
     &.afternoon-break {
 
-      background-color: $color-brand-secondary;
+      background-color: $color-grey-20;
 
     }
 
@@ -252,10 +259,10 @@
  * Displaying labels for session groups
  */
 
-$session-type-color-design:      #E6AA50; // Gold
-$session-type-color-development: #CC9966; // Copper
-$session-type-color-community:   #f5ebe0; // Linnen
-$session-type-color-business:    #575357; // Ash
+$session-type-color-design:      $color-brand-quaternary;
+$session-type-color-development: $color-brand-primary;
+$session-type-color-community:   $color-brand-secondary;
+$session-type-color-business:    $color-brand-tertiary;
 
 @mixin session-label($session-label, $session-color) {
 
@@ -273,16 +280,21 @@ $session-type-color-business:    #575357; // Ash
     display: inline-block;
     padding: rem(1) rem(6);
 
-    border: 2px solid $session-color;
+    @if ($session-color == $color-brand-secondary) {
+      color: $color-text-strong;
+    } @else {
+      color: $color-text-strong-invert;
+    }
+
+    background-color: $session-color;
 
     position: absolute;
     bottom: $unit-s;
 
-    font-size: ms(-1);
+    font-family: $font-brand-secondary;
+    font-size: ms(0);
     line-height: ms(1);
-    color: $color-text-strong;
-    border-radius: $border-radius-large;
-    background: #fff;
+    border-radius: 0;
 
     content: "#{$session-label}";
 

@@ -15,13 +15,22 @@
 
   &:before {
 
-    background-color: $color-brand-tertiary;
+    background-color: $color-brand-quaternary !important;
 
   }
 
   .widget-title {
 
     color: $color-brand-secondary;
+
+    &::before {
+      background-color: $color-brand-primary;
+    }
+
+    &::after {
+      background-color: $color-brand-tertiary;
+    }
+
   }
 
   p {
@@ -40,18 +49,9 @@
   input[type="submit"] {
 
     width: 100%;
-    color: $color-text;
-    text-transform: uppercase;
-    background-color: $color-button-primary;
 
-    &:hover,
-    &:focus,
-    &:active {
-
-      color: $color-text-strong;
-      background-color: $color-button-primary-hover;
-
-    }
+    @extend .button;
+    @extend .button--primary;
 
   }
 

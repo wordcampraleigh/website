@@ -14,12 +14,6 @@
 
   @include clearfix();
 
-  .screen-reader-text {
-
-    @include visually-hidden();
-
-  }
-
   a {
 
     display: block;

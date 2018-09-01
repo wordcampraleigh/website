@@ -71,6 +71,11 @@ article.comment-body {
 
     width: rem(42);
 
+    border: rem(2) solid $color-brand-secondary;
+    padding: 2px;
+    background-color: $color-brand-primary;
+
+    transform: rotate(-5deg);
   }
 
   .fn {

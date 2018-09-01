@@ -110,25 +110,33 @@
 
 .main-navigation {
 
-  position: relative;
+  position: absolute;
+  background-color: $color-brand-primary;
+  width: 100%;
 
-  &:before {
-
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-
-    height: rem(2);
-    background-color: $color-link;
-
-    content: "";
-
+  .kss-section[id*="navigation"] .kss-modifier__example & {
+    position: relative;
   }
+
+  // &:before {
+  //
+  //   position: absolute;
+  //   top: 0;
+  //   left: 0;
+  //   right: 0;
+  //
+  //   height: rem(2);
+  //   background-color: $color-link;
+  //
+  //   content: "";
+  //
+  // }
 
   @include breakpoint(to-small) {
 
-    background-color: $color-brand-tertiary;
+    position: relative;
+
+    // background-color: $color-brand-tertiary;
 
 
 
@@ -199,7 +207,7 @@
 .menu-item a {
 
   display: block;
-  color: $color-link;
+  color: $color-text-strong-invert;
   padding: $unit-xs $unit-s;
 
   text-decoration: none;
@@ -210,9 +218,13 @@
   &:focus,
   &.focus {
 
-    color: $color-text-strong;
+    text-decoration: underline;
     background-color: $color-link-hover;
 
+  }
+
+  &::before {
+    display: none;
   }
 
   @include breakpoint(medium) {
@@ -223,7 +235,7 @@
 
   @include breakpoint(large) {
 
-    padding: $unit-m $unit-l;
+    padding: $unit-s $unit-l;
 
   }
 
@@ -231,7 +243,7 @@
 
 .current-menu-item > a {
 
-  color: $color-text-strong;
+  color: $color-brand-secondary;
   background-color: $color-link;
 
 }
@@ -286,12 +298,12 @@
     &:hover > a,
     &.focus > a {
 
-      color: $color-text-strong;
+      color: $color-text-strong-invert;
       background-color: $color-link;
 
       &:after {
 
-        border-top-color: $color-text-strong;
+        border-top-color: $color-text-strong-invert;
 
       }
 
@@ -306,7 +318,7 @@
 
     &.current-menu-item > a:after {
 
-      border-top-color: $color-text-strong;
+      // border-top-color: $color-text-strong;
 
     }
 
@@ -364,7 +376,7 @@
 
       width: 100%;
       margin: 0;
-      border-top: 1px solid rgba(255,255,255,.2);
+      // border-top: 1px solid rgba(255,255,255,.2);
 
       text-align: left;
 
@@ -374,7 +386,13 @@
 
       padding: rem(10) $unit-s;
 
-      color: $color-text;
+      color: $color-text-invert;
+
+      &:hover,
+      &:focus,
+      &:active {
+        color: $color-text-strong-invert;
+      }
 
     }
 

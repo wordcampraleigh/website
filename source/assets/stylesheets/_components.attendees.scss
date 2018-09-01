@@ -60,6 +60,7 @@
   li {
 
     position: relative;
+    float: left;
 
     margin-top: 0;
     margin-bottom: $unit-default;
@@ -84,11 +85,12 @@
     margin: 0;
     width: rem(48);
     height: rem(48);
-    border: rem(2) solid $color-brand-primary;
 
-    background-color: #fff;
+    border: rem(2) solid $color-brand-secondary;
+    padding: 2px;
+    background-color: $color-brand-primary;
 
-    // transform: rotate(-5deg);
+    transform: rotate(-5deg);
     @include transition-fast();
 
   }
@@ -155,7 +157,7 @@
       margin-left: rem(8);
       vertical-align: middle;
 
-      background: no-repeat $image-bullet-dark 100% 50%;
+      background: no-repeat $image-bullet-color 100% 50%;
       background-size: 14px;
 
       opacity: .5;

@@ -10,36 +10,65 @@
 // :visited - Visited state
 //
 // Markup:
-// <a href="#">Link example</a>
+// <a class="{{modifier_class}}" href="#">Link example</a>
 //
 // Style guide: 4.links
 
 a {
 
   color: $color-link;
-  text-decoration: none;
+  text-decoration: underline;
   @include transition-fast();
 
-  &:hover {
+  position: relative;
+
+  &::before {
+    content: '';
+    display: block;
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transform: rotate(0deg);
+    transition: all 0.3s ease;
+    background-color: $color-brand-secondary;
+  }
+
+  &:hover,
+  &:focus,
+  &:active,
+  &.pseudo-class-hover,
+  &.pseudo-class-focus,
+  &.pseudo-class-active  {
 
     color: $color-link-hover;
-    text-decoration: underline;
+    text-decoration: underline double;
+
+    &::before {
+      opacity: 1;
+      transform: rotate(-2deg);
+    }
 
   }
 
-  &:focus {
-
-    color: $color-link-hover;
-    text-decoration: underline;
-
-  }
-
-  &:active {
-
-    color: $color-link-hover;
-    text-decoration: none;
-
-  }
+  // &:focus,
+  // &.pseudo-class-focus {
+  //
+  //   color: $color-link-hover;
+  //   text-decoration: underline;
+  //
+  // }
+  //
+  // &:active,
+  // &.pseudo-class-active {
+  //
+  //   color: $color-link-hover;
+  //   text-decoration: none;
+  //
+  // }
 
   // &:visited {
 
