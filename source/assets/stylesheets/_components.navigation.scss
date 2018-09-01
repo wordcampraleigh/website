@@ -338,6 +338,8 @@
 
   @include list-reset();
 
+  top: auto;
+
   .menu-item {
 
     text-transform: none;
@@ -349,6 +351,7 @@
   a {
 
     font-size: 1rem;
+    width: 100%;
 
   }
 
