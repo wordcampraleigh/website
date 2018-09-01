@@ -263,7 +263,7 @@ $color-link-visited:         tint($color-link, 20%);
  * Alternate links
  */
 
-$color-link-alt:             $color-brand-tertiary;
+$color-link-alt:             $color-brand-quaternary;
 $color-link-alt-hover:       mix($color-link-alt, #000, 90%);
 $color-link-alt-focus:       mix($color-link-alt, #000, 70%);
 $color-link-alt-visited:     mix($color-link-alt, #fff, 50%);

@@ -212,6 +212,7 @@
 
   text-decoration: none;
   transition: all .1s ease;
+  font-size: 1.2em;
 
   &:hover,
   &:active,
@@ -268,10 +269,13 @@
 
     > a {
 
+      position: relative;
+
       &:after {
 
-        position: relative;
-        top: -(rem(2));
+        position: absolute;
+        top: 1em;
+        right: 0.5em;
 
         display: inline-block;
         border: rem(6) solid transparent;
@@ -335,6 +339,12 @@
     text-transform: none;
     font-weight: $regular;
     font-family: $font-body;
+
+  }
+
+  a {
+
+    font-size: 1rem;
 
   }
 
