@@ -85,3 +85,17 @@ img.wp-smiley, img.emoji {
   }
 
 }
+
+/**
+ * WP Admin Bar Reset
+ */
+
+#wpadminbar {
+  a::before {
+    width: auto;
+    height: auto;
+    z-index: inherit;
+    opacity: inherit;
+    background-color: transparent;
+  }
+}
