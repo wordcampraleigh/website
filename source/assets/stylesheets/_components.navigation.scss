@@ -349,12 +349,7 @@
 
   @include list-reset();
 
-  // box-shadow: none !important;
-  // float: none !important;
-  // left: 0 !important;
-  // position: relative !important;
-  // top: auto !important;
-  // z-index: inherit !important;
+  top: auto !important;
 
   .menu-item {
 
@@ -372,6 +367,12 @@
   }
 
   @include breakpoint(to-small) {
+  
+    box-shadow: none !important;
+    float: none !important;
+    left: 0 !important;
+    position: relative !important;
+    z-index: inherit !important;
 
     a {
 
