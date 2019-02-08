@@ -11,55 +11,83 @@ var gulp = require('gulp'),
     shell = require('gulp-shell'),               // Requiring gulp-shell (used for KSS node)
     kssNode = 'node ' + __dirname + '/node_modules/kss/bin/kss-node '; // Require kss-node
 
+var server = browserSync.create();
+
+var paths = {
+    styles: {
+      src: 'source/assets/stylesheets/*.scss',
+      dest: 'build/assets/stylesheets'
+    },
+    images: {
+      src: 'source/assets/images/**',
+      dest: 'build/assets/images'
+    }
+}
+
 // Start KSS (style guide) task
-gulp.task('kss', shell.task(
-  [kssNode + '--config source/kss-config.json']));
-  // [kssNode + '--xdemo']));
+function kss(done) {
+  shell.task(
+    [kssNode + '--config source/kss-config.json']);
+  done();
+}
 
 // Start browserSync server
-gulp.task('browserSync', function() {
-  browserSync({
+function startServer(done) {
+  server.init({
     // Display the build folder first
     startPath: 'styleguide',
     server: {
       // Start in root (important for relative paths between build and style guide folders)
       baseDir: ''
     }
-  })
-})
+  });
+  done();
+}
 
-// Start stylesheets task
-gulp.task('stylesheets', function() {
-  gulp.src('source/assets/stylesheets/*.scss') // Get all *.scss files
+// Reload browserSync server
+function reloadServer(done) {
+  server.reload();
+  done();
+}
+
+// Stylesheets task
+function stylesheets() {
+  return gulp
+    .src(paths.styles.src) // Get all *.scss files
     .pipe(plumber({errorHandler: notify.onError("Error: <%= error.message %>")})) // Show error
     .pipe(sourcemaps.init()) // Initialize sourcemap plugin
     .pipe(sass().on('error', sass.logError)) // Compiling sass
     .pipe(autoprefixer('last 2 version')) // Adding browser prefixes
     .pipe(sourcemaps.write()) // Writing sourcemaps
     .pipe(cssnano()) // Compress
-    .pipe(gulp.dest('build/assets/stylesheets'))
-    .pipe(browserSync.reload({
-      stream: true
-    }));
-})
+    .pipe(gulp.dest(paths.styles.dest))
+    .pipe(browserSync.stream());
+}
 
-// Start images task
-gulp.task('images', function() {
-
-  gulp.src('source/assets/images/**')
+// Images task
+function images() {
+  return gulp
+    .src(paths.images.src)
     .pipe(imagemin())
-    .pipe(gulp.dest('build/assets/images'));
+    .pipe(gulp.dest(paths.images.dest));
+}
 
-});
+// Watch files
+function watchFiles() {
+  gulp.watch('source/assets/stylesheets/**/*.scss', stylesheets); // Watch for SCSS changes
+  gulp.watch('source/assets/images/**/*', images); // Watch for image changes
+  gulp.watch('source/**', kss); // Watch for style guide changes
+  gulp.watch(['build/**.html', 'styleguide/**.html'], reloadServer);
+}
 
-// Start watch groups of tasks
-gulp.task('default', ['browserSync', 'stylesheets', 'images', 'kss'], function() {
-  gulp.watch('source/assets/stylesheets/**/*.scss', ['stylesheets']); // Watch for SCSS changes
-  gulp.watch('source/assets/images/**/*', ['images']); // Watch for image changes
-  gulp.watch('source/**', ['kss']); // Watch for style guide changes
-  gulp.watch('build/**.html', browserSync.reload);
-  gulp.watch('styleguide/**.html', browserSync.reload);
-});
+// Define build tasks
+var watch = gulp.parallel(startServer, watchFiles);
+var build = gulp.parallel(stylesheets, images, kss);
 
-// Start build task
-gulp.task('build', ['stylesheets', 'images', 'kss'], function() {})
+// Exports
+exports.stylesheets = stylesheets;
+exports.images = images;
+exports.watchFiles = watchFiles;
+exports.watch = watch;
+exports.build = build;
+exports.default = watch;

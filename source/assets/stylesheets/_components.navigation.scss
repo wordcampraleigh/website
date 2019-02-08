@@ -30,10 +30,12 @@
   font-weight: $bold;
   text-align: center;
   letter-spacing: .05em;
-  color: $color-link;
+  color: $color-text-strong-invert;
 
   border-radius: 0;
-  background-color: rgba($color-brand-tertiary, .9);
+  background-color: rgba($color-brand-primary, 1);
+
+  transform: none !important;
 
   cursor: pointer;
 
@@ -42,8 +44,12 @@
   &:focus,
   &.focus {
 
-    color: $color-link-hover;
-    background-color: rgba($color-brand-tertiary, .9);
+    color: $color-text-strong-invert;
+    background-color: rgba($color-brand-primary, .9);
+
+    &, &:before {
+      transform: none !important;
+    }
 
   }
 
@@ -52,9 +58,14 @@
 
     display: inline-block;
 
-    font-size: 16px;
+    font-size: 18px;
     line-height: 24px;
     vertical-align: middle;
+
+    position: relative;
+    transform: none;
+    width: auto;
+    z-index: inherit;
 
     content: "Menu";
 
@@ -71,7 +82,7 @@
 
     vertical-align: middle;
 
-    border-top-color: $color-link;
+    border-top-color: $color-text-strong-invert;
 
     content: "";
 
@@ -79,12 +90,12 @@
 
   &[aria-expanded="true"] {
 
-    color: $color-link;
+    color: $color-text-strong-invert;
 
     &:after {
 
       border-top-color: transparent;
-      border-bottom-color: $color-link;
+      border-bottom-color: $color-text-strong-invert;
 
     }
 
@@ -259,7 +270,7 @@
 
 .menu-item-has-children {
 
-  background-color: rgba($color-brand-tertiary, .6);
+  background-color: transparent;
 
   .dropdown-toggle {
 
@@ -339,6 +350,9 @@
   @include list-reset();
 
   top: auto !important;
+  position: relative !important;
+  float: none !important;
+  box-shadow: none !important;
 
   .menu-item {
 

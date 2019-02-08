@@ -1,0 +1,21 @@
+/* =Sharedaddy styles
+===================================================== */
+
+// Custom styles for Jetpack social share plugin
+
+div.sharedaddy {
+  h3.sd-title::before {
+    border-top: none;
+    margin-bottom: 0;
+  }
+
+  .sd-content {
+    li::before {
+      display: none;
+    }
+
+    .linkedin_button span {
+      vertical-align: top !important;
+    }
+  }
+}
