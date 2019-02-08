@@ -5,8 +5,8 @@
 
 div.sharedaddy {
   h3.sd-title::before {
-    border-top: none;
-    margin-bottom: 0;
+    border-top: none !important;
+    margin-bottom: 0 !important;
   }
 
   .sd-content {
