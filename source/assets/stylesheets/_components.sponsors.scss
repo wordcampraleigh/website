@@ -44,6 +44,7 @@
         top: 50%;
         left: 50%;
         width: 100%;
+        height: 0;
         transform: translateX(-50%);
 
         border-top: 1px solid $color-border-weak;
@@ -129,7 +130,8 @@
 .wcorg-sponsor-level-administrator,
 .wcorg-sponsor-level-event-after-party,
 .wcorg-sponsor-level-event-speakers-dinner,
-.wcorg-sponsor-level-super-admin {
+.wcorg-sponsor-level-super-admin,
+.wcorg-sponsor-level-gold {
 
   @include clearfix();
 
@@ -156,7 +158,8 @@
 // Medium
 .wcorg-sponsor-level-speakers-dinner,
 .wcorg-sponsor-level-author,
-.wcorg-sponsor-level-editor {
+.wcorg-sponsor-level-editor,
+.wcorg-sponsor-level-silver {
 
   @include clearfix();
 
@@ -176,7 +179,8 @@
 
 // Small
 .wcorg-sponsor-level-subscriber,
-.wcorg-sponsor-level-small-business {
+.wcorg-sponsor-level-small-business,
+.wcorg-sponsor-level-bronze {
 
   @include clearfix();
 
@@ -195,7 +199,8 @@
 }
 
 // Tiny
-.wcorg-sponsor-level-microsponsor {
+.wcorg-sponsor-level-microsponsor,
+.wcorg-sponsor-level-individual {
 
   @include clearfix();
 
