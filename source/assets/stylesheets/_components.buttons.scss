@@ -27,6 +27,7 @@
 
 .button,
 .wp-block-button__link,
+.pushbutton-wide,
 #{$all-buttons} {
 
   /* Positioning */
@@ -117,7 +118,7 @@
 
   }
 
-  &.button--secondary {
+  &.button--secondary, &.pushbutton-wide {
 
     color: $color-text;
     background-color: $color-button-secondary;
