@@ -93,7 +93,7 @@
 
   }
 
-  &.button--primary, .wp-block-button__link {
+  &.button--primary, &.wp-block-button__link {
 
     color: $color-text-strong-invert;
     background-color: $color-button-primary;
