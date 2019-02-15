@@ -84,10 +84,14 @@
   }
 
   h3,
-  .wcorg-sponsor-description p {
+  .wcorg-sponsor-description > * {
 
     display: none;
 
+  }
+
+  .wcorg-sponsor-description > a:first-child {
+    display: block !important;
   }
 
   a {
