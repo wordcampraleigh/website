@@ -44,6 +44,8 @@
 
   @include container-center();
 
+  @include container-padding(1.5);
+
   text-align: left;
 
 }
@@ -58,7 +60,7 @@
 
 #content {
 
-  @include container-padding(1.5);
+  // @include container-padding(1.5);
 
 }
 
