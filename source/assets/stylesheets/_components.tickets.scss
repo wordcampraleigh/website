@@ -3,6 +3,14 @@
 
 // Realistic Tickets CSS
 
+.ticket-prefix {
+  @media (min-width: 600px) {
+    margin-bottom: 0;
+    margin-right: 20rem;
+    text-align: left;
+  }
+}
+
 .realistic-ticket {
     display: inline-block;
     min-width: 280px;
@@ -24,6 +32,10 @@
 
     @media (min-width: 48em) {
         transform: rotate(-15deg);
+
+        &:focus, &:hover {
+          transform: scale(1.1) rotate(-16deg);
+        }
     }
 
     .realistic-ticket__part-left, .realistic-ticket__part-right {

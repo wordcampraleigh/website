@@ -109,8 +109,8 @@
 
   &:before {
 
-    background-image: $image-pattern-01;
-    background-color: $color-brand-quaternary!important;
+    // background-image: $image-pattern-01;
+    background-color: $color-brand-secondary !important;
     background-size: 120px;
     background-attachment: fixed;
     background-position: 50% 0;
