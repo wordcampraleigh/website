@@ -299,7 +299,7 @@ $session-type-color-developers:  $color-brand-primary;
 $session-type-color-everyone:    #B4177A;
 $session-type-color-power-users: #7E433A;
 
-@mixin session-label($session-label, $session-color) {
+@mixin session-label($session-label, $session-color, $session-label2: null, $session-color2: null) {
 
   position: relative;
   padding-bottom: rem(40);
@@ -315,13 +315,21 @@ $session-type-color-power-users: #7E433A;
     display: inline-block;
     padding: rem(1) rem(6);
 
-    @if ($session-color == $color-brand-secondary or $session-color == "#fda22b") {
+    @if ($session-color == $color-brand-secondary or $session-color == $session-type-color-business) {
       color: $color-text-strong;
     } @else {
       color: $color-text-strong-invert;
     }
 
-    background-color: $session-color;
+    @if ($session-color2) {
+      background: linear-gradient(
+        45deg,
+        $session-color,
+        $session-color2 50%,
+      );
+    } @else {
+      background-color: $session-color;
+    }
 
     position: absolute;
     bottom: $unit-s;
@@ -331,45 +339,25 @@ $session-type-color-power-users: #7E433A;
     line-height: ms(1);
     border-radius: 0;
 
-    content: "#{$session-label}";
+    @if ($session-label2) {
+      content: "#{$session-label} + #{$session-label2}";
+    } @else {
+      content: "#{$session-label}";
+    }
 
   }
 
 }
 
 
-// Development
-.wcb-session-category-developers {
-
-  @include session-label('Developers', $session-type-color-developers);
-
+// Beginners
+.wcb-session-category-beginners {
+  @include session-label('Beginners', $session-type-color-beginners);
 }
 
 // Business
 .wcb-session-category-business-owners {
-
   @include session-label('Business', $session-type-color-business);
-
-}
-
-// Everyone
-
-.wcb-session-category-everyone {
-
-  @include session-label('Everyone', $session-type-color-everyone);
-
-}
-
-// Design
-.wcb-session-category-designers {
-
-  @include session-label('Designers', $session-type-color-designers);
-
-}
-
-// Beginners
-.wcb-session-category-beginners {
-  @include session-label('Beginners', $session-type-color-beginners);
 }
 
 // Content
@@ -377,9 +365,38 @@ $session-type-color-power-users: #7E433A;
   @include session-label('Content Creators', $session-type-color-content);
 }
 
+// Design
+.wcb-session-category-designers {
+  @include session-label('Designers', $session-type-color-designers);
+}
+
+// Development
+.wcb-session-category-developers {
+  @include session-label('Developers', $session-type-color-developers);
+}
+
+// Everyone
+.wcb-session-category-everyone {
+  @include session-label('Everyone', $session-type-color-everyone);
+}
+
 // Power Users
 .wcb-session-category-power-users {
   @include session-label('Power Users', $session-type-color-power-users);
+}
+
+// Combos
+.wcb-session-category-beginners.wcb-session-category-business-owners {
+  @include session-label('Beginners', $session-type-color-beginners, 'Business', $session-type-color-business);
+}
+.wcb-session-category-developers.wcb-session-category-power-users {
+  @include session-label('Power Users', $session-type-color-power-users, 'Developers', $session-type-color-developers);
+}
+.wcb-session-category-designers.wcb-session-category-developers {
+  @include session-label('Designers', $session-type-color-designers, 'Developers', $session-type-color-developers);
+}
+.wcb-session-category-beginners.wcb-session-category-content-creators {
+  @include session-label('Content Creators', $session-type-color-content, 'Beginners', $session-type-color-beginners);
 }
 
 // @media (min-width: 47.9376em) {
