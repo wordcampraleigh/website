@@ -9,13 +9,23 @@
 //
 // Style guide: 6.schedule
 
+.page-slug-schedule {
+  .site-main {
+    width: 93vw;
+    transform: translateX(calc((50rem - 100vw)/2));
+  }
+
+  @include breakpoint(to-medium) {
+    width: auto;
+    transform: none;
+  }
+}
+
 .wcpt-schedule {
 
   box-shadow: $box-shadow-medium;
   margin-bottom: $unit-default;
   background-color: #fff;
-  width: 93vw;
-	transform: translateX(calc((50rem - 100vw)/2));
 
   td,
   th {
@@ -156,8 +166,6 @@
 
   @include breakpoint(to-medium) {
 
-    width: auto;
-    transform: none;
     border: none;
 
     td,
