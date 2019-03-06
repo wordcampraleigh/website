@@ -323,7 +323,7 @@ $session-type-color-power-users: #7E433A;
     display: inline-block;
     padding: rem(1) rem(6);
 
-    @if ($session-color == $color-brand-secondary) {
+    @if ($session-color == $color-brand-secondary or $session-color == $color-brand-secondary) {
       color: $color-text-strong;
     } @else {
       color: $color-text-strong-invert;
@@ -405,4 +405,7 @@ $session-type-color-power-users: #7E433A;
 }
 .wcb-session-category-beginners.wcb-session-category-content-creators {
   @include session-label('Content Creators', $session-type-color-content, 'Beginners', $session-type-color-beginners);
+}
+.wcb-session-category-designers.wcb-session-category-content-creators {
+  @include session-label('Designers', $session-type-color-designers, 'Content Creators', $session-type-color-content);
 }
