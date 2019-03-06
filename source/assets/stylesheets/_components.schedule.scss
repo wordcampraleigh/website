@@ -86,6 +86,8 @@
 
   .global-session {
 
+    text-align: center;
+
     &.registration,
     &.lunch,
     &.break,
@@ -398,50 +400,3 @@ $session-type-color-power-users: #7E433A;
 .wcb-session-category-beginners.wcb-session-category-content-creators {
   @include session-label('Content Creators', $session-type-color-content, 'Beginners', $session-type-color-beginners);
 }
-
-// @media (min-width: 47.9376em) {
-// 	.wcpt-schedule {
-// 		width: 93vw;
-// 		left: 0;
-// 		transform: translateX(calc((50rem - 100vw)/2));
-// 	}
-//
-// 	.wcpt-schedule .wcpt-col-track {
-// 		width: 22.5%;
-// 	}
-// }
-//
-// .key-audience-beginners, .key-audience-business, .key-audience-content, .key-audience-designers, .key-audience-developers, .key-audience-everyone, .key-audience-power-users {
-// 	display: inline-block;
-// 	height: 10px;
-// 	width: 10px;
-// 	transform: rotate(-9deg);
-// }
-//
-// .key-audience-beginners, .wcb-session-category-beginners {
-// 	background: #e91e63;
-// }
-//
-// .key-audience-business, .wcb-session-category-business-owners {
-// 	background: #fda22b;
-// }
-//
-// .key-audience-content, .wcb-session-category-content-creators {
-// 	background: #FDC83C;
-// }
-//
-// .key-audience-designers, .wcb-session-category-designers {
-// 	background: #5DD166;
-// }
-//
-// .key-audience-developers, .wcb-session-category-developers {
-// 	background: #31429C;
-// }
-//
-// .key-audience-everyone, .wcb-session-category-everyone {
-// 	background-color: #B4177A;
-// }
-//
-// .key-audience-power-users, .wcb-session-category-power-users {
-// 	background-color: #7E433A;
-// }
