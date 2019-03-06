@@ -292,9 +292,9 @@
  */
 
 $session-type-color-beginners:   $color-brand-quaternary;
-$session-type-color-business:    #fda22b;
+$session-type-color-business:    $color-brand-tertiary;
 $session-type-color-content:     $color-brand-secondary;
-$session-type-color-designers:   $color-brand-tertiary;
+$session-type-color-designers:   #fda22b;
 $session-type-color-developers:  $color-brand-primary;
 $session-type-color-everyone:    #B4177A;
 $session-type-color-power-users: #7E433A;
@@ -315,7 +315,7 @@ $session-type-color-power-users: #7E433A;
     display: inline-block;
     padding: rem(1) rem(6);
 
-    @if ($session-color == $color-brand-secondary or $session-color == $session-type-color-business) {
+    @if ($session-color == $color-brand-secondary or $session-color == $session-type-color-designers) {
       color: $color-text-strong;
     } @else {
       color: $color-text-strong-invert;
@@ -324,8 +324,8 @@ $session-type-color-power-users: #7E433A;
     @if ($session-color2) {
       background: linear-gradient(
         45deg,
-        $session-color,
-        $session-color2 50%,
+        $session-color 40%,
+        $session-color2 70%,
       );
     } @else {
       background-color: $session-color;
