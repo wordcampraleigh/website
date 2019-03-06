@@ -205,17 +205,10 @@
     .wcb-track-lake-crabtree {
 
       display: block;
-      padding: $unit-xs $unit-s;
-      margin-top: -($unit-xs);
-      margin-left: -($unit-s);
-      margin-right: -($unit-s);
-      margin-bottom: $unit-xs;
       border: none;
 
       color: $color-text-strong;
       font-weight: $bold;
-      background-color: $color-brand-quaternary!important;
-
 
     }
 
@@ -280,8 +273,7 @@
       padding-top: $unit-s;
       padding-bottom: $unit-s;
 
-      color: $color-text-strong-invert;
-      background-color: $color-brand-tertiary;
+      background-color: $color-brand-secondary;
 
     }
 
