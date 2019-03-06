@@ -13,6 +13,10 @@
   .site-main {
     h1, h2, h3 {
       text-align: center;
+
+      &::before, &::after {
+        display: none;
+      }
     }
   }
 }
