@@ -315,7 +315,7 @@ $session-type-color-power-users: #7E433A;
     display: inline-block;
     padding: rem(1) rem(6);
 
-    @if ($session-color == $color-brand-secondary or $session-color == $session-type-color-designers) {
+    @if ($session-color == $color-brand-secondary) {
       color: $color-text-strong;
     } @else {
       color: $color-text-strong-invert;
