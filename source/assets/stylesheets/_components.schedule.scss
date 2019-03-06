@@ -86,7 +86,9 @@
 
   .global-session {
 
-    text-align: center;
+    .wcpt-session-title {
+      text-align: center;
+    }
 
     &.registration,
     &.lunch,
