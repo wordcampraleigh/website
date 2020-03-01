@@ -219,7 +219,8 @@ $color-brand-secondary:           #577B94;
 $color-brand-tertiary:            #A8C4B5;
 $color-brand-tertiary-a11y:       #657C6F;
 $color-brand-quaternary:          #B89262;
-$color-brand-quaternary:          #9C6D3C;
+$color-brand-quaternary-a11y:     #9C6D3C;
+$color-brand-quaternary-light:    tint($color-brand-quaternary, 50%);
 
 @include cc($color-brand-primary, 'color-brand-primary');
 @include cc($color-brand-secondary, 'color-brand-secondary');
@@ -233,7 +234,7 @@ $color-brand-quaternary:          #9C6D3C;
 
 $color-text:                      #232121;
 $color-text-weak:                 $color-brand-primary;
-$color-text-strong:               #0c0b0b;
+$color-text-strong:               $color-text;
 $color-text-invert:               #d6d4d3;
 $color-text-weak-invert:          #e3e2e2;
 $color-text-strong-invert:        #f1f1f0;
@@ -250,10 +251,10 @@ $color-text-strong-invert:        #f1f1f0;
  * Links
  */
 
-$color-link:                 $color-brand-secondary;
-$color-link-hover:           shade($color-link, 10%);
-$color-link-focus:           shade($color-link, 20%);
-$color-link-visited:         tint($color-link, 20%);
+$color-link:                 $color-text;
+$color-link-hover:           shade($color-link, 20%);
+$color-link-focus:           shade($color-link, 30%);
+$color-link-visited:         tint($color-link, 5%);
 
 @include cc($color-link, 'color-link');
 @include cc($color-link-focus, 'color-link-focus');
@@ -265,7 +266,7 @@ $color-link-visited:         tint($color-link, 20%);
  * Alternate links
  */
 
-$color-link-alt:             $color-brand-tertiary;
+$color-link-alt:             $color-brand-primary;
 $color-link-alt-hover:       mix($color-link-alt, #000, 90%);
 $color-link-alt-focus:       mix($color-link-alt, #000, 70%);
 $color-link-alt-visited:     mix($color-link-alt, #fff, 50%);
@@ -363,9 +364,9 @@ $color-input-radio-active:        $color-brand-primary;
 $color-button-regular:            $color-grey-10;
 $color-button-regular-hover:      $color-grey-20;
 $color-button-primary:            $color-brand-primary;
-$color-button-primary-hover:      shade($color-button-primary, 10%);
-$color-button-secondary:          $color-brand-secondary;
-$color-button-secondary-hover:    shade($color-button-secondary, 10%);
+$color-button-primary-hover:      $color-brand-secondary;
+$color-button-secondary:          $color-brand-tertiary-a11y;
+$color-button-secondary-hover:    $color-brand-primary;
 $color-button-invert:             #fff;
 $color-button-invert-hover:       mix($color-button-invert, #000, 90%);
 $color-button-inactive:           #eeeeee;
@@ -376,9 +377,9 @@ $color-button-inactive:           #eeeeee;
  */
 
 $color-text-heading-1:            $color-brand-tertiary-a11y;
-$color-text-heading-2:            $color-text-weak;
-$color-text-heading-3:            $color-text-strong;
-$color-text-heading-4:            $color-text;
+$color-text-heading-2:            $color-brand-tertiary-a11y;
+$color-text-heading-3:            $color-text-weak;
+$color-text-heading-4:            $color-text-strong;
 $color-text-paragraph:            $color-text;
 
 

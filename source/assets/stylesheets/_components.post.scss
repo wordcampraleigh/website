@@ -51,16 +51,17 @@
 .entry-meta {
 
   margin-bottom: $unit-s;
+  font-family: $font-brand-secondary;
 
   a {
 
-    color: $color-link-alt;
+    // color: $color-link-alt;
 
     &:hover,
     &:focus,
     &:active {
 
-      color: $color-link-alt-hover;
+      // color: $color-link-alt-hover;
 
     }
 
@@ -106,13 +107,13 @@
 
   a {
 
-    color: $color-link-alt;
+    color: $color-text-weak;
 
     &:hover,
     &:focus,
     &:active {
 
-      color: $color-link-alt-hover;
+      color: $color-text;
 
     }
 

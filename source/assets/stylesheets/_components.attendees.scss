@@ -60,6 +60,8 @@
   li {
 
     position: relative;
+    float: left;
+    display: block;
 
     margin-top: 0;
     margin-bottom: $unit-default;
@@ -71,6 +73,10 @@
     font-size: ms(-1);
     line-height: ms(1);
     text-align: left;
+
+    &::before {
+      display: none;
+    }
 
   }
 
@@ -87,6 +93,7 @@
     border: rem(2) solid $color-brand-primary;
 
     background-color: #fff;
+    filter: sepia(1) saturate(0.4);
 
     // transform: rotate(-5deg);
     @include transition-fast();
@@ -120,6 +127,7 @@
     margin-bottom: rem(2);
 
     color: $color-text-strong;
+    font-family: $font-brand-secondary;
     font-weight: $bold;
     font-size: ms(0, 18px);
     line-height: ms(1);
@@ -131,6 +139,7 @@
   li:hover .avatar {
 
     transform: scale(1.1);
+    filter: sepia(0) saturate(1);
 
   }
 
@@ -150,17 +159,17 @@
 
       display: inline-block;
 
-      width: rem(14);
-      height: rem(14);
       margin-left: rem(8);
       vertical-align: middle;
 
-      background: no-repeat $image-bullet-dark 100% 50%;
-      background-size: 14px;
+      @include image-bullet-color();
 
-      opacity: .5;
+      // background: no-repeat $image-bullet-dark 100% 50%;
+      // background-size: 14px;
 
-      content: "";
+      // opacity: .5;
+      //
+      // content: "";
 
     }
 

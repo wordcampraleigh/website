@@ -6,8 +6,8 @@
 
 /* Define basic variables and colors */
 $styleguide-color-main: $color-brand-tertiary;
-$styleguide-color-link: $color-brand-secondary;
-$styleguide-color-link-alt: $color-brand-quaternary;
+$styleguide-color-link: $color-link;
+$styleguide-color-link-alt: $color-link-alt;
 $styleguide-color-weak: $color-text-weak;
 $styleguide-color-strong: $color-text-strong;
 $styleguide-border-radius-small: 3px;
@@ -111,7 +111,7 @@ $styleguide-border-radius-small: 3px;
 
     margin-bottom: rem(24);
 
-    @include font-size(16);
+    @include font-size(20);
     line-height: 1.5;
     font-family: $font-brand-secondary;
     font-weight: $bold;
@@ -120,7 +120,7 @@ $styleguide-border-radius-small: 3px;
 
     @include breakpoint(small) {
 
-      @include font-size(20);
+      @include font-size(36);
       line-height: 1.5;
 
     }
@@ -305,7 +305,7 @@ $styleguide-border-radius-small: 3px;
 
     margin: 0;
 
-    border-top: 1px solid $color-border-weak;
+    // border-top: 1px solid $color-border-weak;
 
     font-family: $font-brand-secondary;
     @include font-size(16);

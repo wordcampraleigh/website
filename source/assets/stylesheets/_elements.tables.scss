@@ -78,7 +78,7 @@ th,
 td {
 
   padding: $unit-xs $unit-s;
-  border-top: 1px solid rgba(0,0,0,.1);
+  border-top: 1px solid $color-border-normal;
 
   @include font-size(16);
   line-height: 1.5;
@@ -89,4 +89,10 @@ td {
 
   }
 
+}
+
+th {
+  font-family: $font-brand-secondary;
+  color: $color-brand-tertiary-a11y;
+  font-size: 1.2rem;
 }

@@ -62,3 +62,10 @@ $image-pattern-01:              url('https://2017.europe.wordcamp.org/files/2017
 $image-realistic-ticket:        url('https://2017.europe.wordcamp.org/files/2017/01/realistic-ticket.png');
 $image-bullet-color:            url('https://2017.europe.wordcamp.org/files/2017/01/decoration-bullet-color.png');
 $image-bullet-dark:             url('https://2017.europe.wordcamp.org/files/2017/01/decoration-bullet-dark.png');
+@mixin image-bullet-color {
+  content: "\06DE";
+  color: $color-brand-quaternary;
+  font-family: $helvetica;
+  position: relative;
+  font-size: 0.85rem;
+}

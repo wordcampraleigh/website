@@ -19,6 +19,10 @@
   border-top: 1px solid $color-border-weak;
   padding: $unit-default 0;
 
+  h2 {
+    margin-bottom: 0;
+  }
+
   .wcorg-session-description {
 
     @include clearfix();
@@ -27,6 +31,8 @@
 
   .wcpt-session-meta {
 
+    font-family: $font-brand-secondary;
+    margin-bottom: $unit-m;
 
   }
 
@@ -34,6 +40,16 @@
 
     float: left;
     margin: $unit-xs $unit-s $unit-xs 0;
+    border: rem(2) solid $color-brand-primary;
+    filter: sepia(1) saturate(0.4);
+    @include transition-fast();
+
+    &:hover {
+
+      transform: scale(1.1);
+      filter: sepia(0) saturate(1);
+
+    }
 
   }
 

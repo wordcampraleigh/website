@@ -59,7 +59,8 @@ article.comment-body {
 .comment-author {
 
   display: block;
-  font-size: ms(-1);
+  font-family: $font-brand-secondary;
+  // font-size: ms(-1);
   line-height: ms(2);
 
   .avatar {
@@ -91,7 +92,8 @@ article.comment-body {
 .comment-metadata {
 
   // display: inline-block;
-  font-size: ms(-2);
+  font-family: $font-brand-secondary;
+  font-size: ms(-1);
   line-height: ms(2);
 
 }

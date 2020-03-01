@@ -15,13 +15,14 @@
 
   &:before {
 
-    background-color: $color-brand-tertiary;
+    background-color: $color-brand-quaternary;
 
   }
 
   .widget-title {
 
-    color: $color-brand-secondary;
+    color: $color-text-strong-invert;
+    font-size: ms(2);
   }
 
   p {
@@ -40,18 +41,8 @@
   input[type="submit"] {
 
     width: 100%;
-    color: $color-text;
-    text-transform: uppercase;
-    background-color: $color-button-primary;
 
-    &:hover,
-    &:focus,
-    &:active {
-
-      color: $color-text-strong;
-      background-color: $color-button-primary-hover;
-
-    }
+    @extend .button;
 
   }
 

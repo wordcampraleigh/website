@@ -33,9 +33,13 @@
     line-height: ms(1);
 
     display: block;
-    margin-top: $unit-s;
+    margin-top: 0;
 
     text-align: center;
+
+    &::before {
+      display: none;
+    }
 
     @include breakpoint(extra-small) {
 
@@ -66,12 +70,13 @@
 
     display: block;
     padding: $unit-s $unit-m;
-    padding-top: rem(68);
+    padding-top: rem(90);
 
 
-    color: rgba(0,0,0,.8);
+    // color: rgba(0,0,0,.8);
     border-radius: $border-radius-small;
     text-decoration: none;
+    font-family: $font-brand-secondary;
 
     &:empty {
 
@@ -82,14 +87,14 @@
     &:before {
 
       position: absolute;
-      top: 0;
+      top: rem(15);
       left: 50%;
       transform: translateX(-50%)  rotate(45deg);
 
       display: block;
       width: rem(40);
       height: rem(40);
-      border: 4px solid $color-brand-primary;
+      border: 4px solid $color-brand-quaternary;
 
       content :"";
 
@@ -101,7 +106,7 @@
     &:after {
 
       position: absolute;
-      top: 0;
+      top: rem(15);
       left: 50%;
       transform: translateX(-50%);
 
@@ -121,13 +126,13 @@
     &:active {
 
       text-decoration: none;
-      color: $color-text-strong-invert;
-      background-color: $color-brand-primary;
+      // color: $color-text-strong-invert;
+      // background-color: $color-brand-primary;
 
       &:before {
 
-        background-color: tint($color-brand-primary, 60%);
-        border-color: tint($color-brand-primary, 60%);
+        background-color: $color-text-strong-invert;
+        border-color: $color-text-strong-invert;
 
       }
 

@@ -34,21 +34,20 @@
   /* Box-model */
   display: inline-block;
   padding: rem(7) rem(16);
-  border: 1px solid $color-button-regular;
 
   /* Typography */
   font-size: ms(0);
   line-height: ms(2);
   text-align: center;
   color: $color-text;
-  font-family: $font-brand-primary;
-  font-weight: $bold;
+  font-family: $font-brand-secondary;
   text-decoration: none;
 
   /* Visual */
   background-color: $color-button-regular;
+  background-image: none;
   border-radius: $border-radius-small;
-  border-color: transparent;
+  border: 2px solid $color-text;
 
   /* Misc */
   cursor: pointer;
@@ -58,8 +57,8 @@
   &:focus,
   &:active {
 
-    color: $color-text-strong;
-    background-color: $color-button-regular-hover;
+    color: $color-button-invert;
+    background-color: $color-button-primary;
     text-decoration: none;
 
   }
@@ -73,30 +72,30 @@
 
   &.button--primary {
 
-    color: $color-text-invert;
-    background-color: $color-button-primary;
-
-    &:hover,
-    &:focus,
-    &:active {
-
-      color: $color-text-strong-invert;
-      background-color: $color-button-primary-hover;
-
-    }
+    // color: $color-button-invert;
+    // background-color: $color-button-primary;
+    //
+    // &:hover,
+    // &:focus,
+    // &:active {
+    //
+    //   color: $color-button-invert;
+    //   background-color: $color-button-primary-hover;
+    //
+    // }
 
   }
 
   &.button--secondary {
 
-    color: $color-text-invert;
+    color: $color-button-invert;
     background-color: $color-button-secondary;
 
     &:hover,
     &:focus,
     &:active {
 
-      color: $color-text-strong-invert;
+      color: $color-button-invert;
       background-color: $color-button-secondary-hover;
 
     }
@@ -105,15 +104,15 @@
 
   &.button--invert {
 
-    color: $color-text;
-    background-color: $color-button-invert;
+    color: $color-button-invert;
+    background-color: $color-button-primary;
 
     &:hover,
     &:focus,
     &:active {
 
-      color: $color-text-strong;
-      background-color: $color-button-invert-hover;
+      color: $color-button-invert;
+      background-color: $color-button-primary-hover;
 
     }
 
@@ -121,14 +120,16 @@
 
   &.button--inactive {
 
-    color: rgba(0,0,0,.3);
+    color: $color-text-weak;
     background-color: $color-button-inactive;
+    border-color: $color-text-weak;
+    cursor: not-allowed;
 
     &:hover,
     &:focus,
     &:active {
 
-      color: rgba(0,0,0,.3);
+      color: $color-text-weak;
       background-color: $color-button-inactive;
 
     }
