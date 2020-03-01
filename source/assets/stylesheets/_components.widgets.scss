@@ -7,12 +7,14 @@
   @include container-padding(1.5);
   position: relative;
   max-width: $container-max-width;
+  margin-left: auto;
+  margin-right: auto;
 
 }
 
 .widget-title {
 
-  font-size: ms(2);
+  font-size: ms(5);
   line-height: ms(1);
 
 }
@@ -38,7 +40,7 @@
 
   }
 
-  &:before {
+  &::before {
 
     position: absolute;
     // z-index: -1;
@@ -55,7 +57,6 @@
 
 }
 
-
 /*
  * Widget text
  *
@@ -66,7 +67,17 @@
 
   background-color: tint($color-brand-tertiary, 80%);
 
-  &:before {
+  &::before {
+
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: -1000px;
+    right: -1000px;
+
+    background-color: inherit;
+
+    content: "";
 
     background-color: tint($color-brand-tertiary, 80%) !important;
 
