@@ -214,10 +214,10 @@
 
 /* Brand */
 
-$color-brand-primary:             #d3461f;
-$color-brand-secondary:           #00b09c;
-$color-brand-tertiary:            #1d242a;
-$color-brand-quaternary:          #222;
+$color-brand-primary:             #756F6D;
+$color-brand-secondary:           #8c9eab;
+$color-brand-tertiary:            #A8C4B5;
+$color-brand-quaternary:          #B89262;
 
 @include cc($color-brand-primary, 'color-brand-primary');
 @include cc($color-brand-secondary, 'color-brand-secondary');
@@ -229,12 +229,12 @@ $color-brand-quaternary:          #222;
  * Text
  */
 
-$color-text:                      rgba(0,0,0,.75);
-$color-text-weak:                 rgba(0,0,0,.6);
-$color-text-strong:               rgba(0,0,0,.9);
-$color-text-invert:               rgba(255,255,255,.75);
-$color-text-weak-invert:          rgba(255,255,255,.6);
-$color-text-strong-invert:        rgba(255,255,255,.9);
+$color-text:                      #232121;
+$color-text-weak:                 $color-brand-primary;
+$color-text-strong:               #0c0b0b;
+$color-text-invert:               #d6d4d3;
+$color-text-weak-invert:          #e3e2e2;
+$color-text-strong-invert:        #f1f1f0;
 
 @include cc($color-text, 'color-text');
 @include cc($color-text-weak, 'color-text-weak');
@@ -248,7 +248,7 @@ $color-text-strong-invert:        rgba(255,255,255,.9);
  * Links
  */
 
-$color-link:                 $color-brand-primary;
+$color-link:                 $color-brand-secondary;
 $color-link-hover:           shade($color-link, 10%);
 $color-link-focus:           shade($color-link, 20%);
 $color-link-visited:         tint($color-link, 20%);
@@ -263,7 +263,7 @@ $color-link-visited:         tint($color-link, 20%);
  * Alternate links
  */
 
-$color-link-alt:             $color-brand-secondary;
+$color-link-alt:             $color-brand-tertiary;
 $color-link-alt-hover:       mix($color-link-alt, #000, 90%);
 $color-link-alt-focus:       mix($color-link-alt, #000, 70%);
 $color-link-alt-visited:     mix($color-link-alt, #fff, 50%);
@@ -278,16 +278,16 @@ $color-link-alt-visited:     mix($color-link-alt, #fff, 50%);
  * Shades of grey
  */
 
-$color-grey-10:                   tint($color-brand-tertiary, 90%); // Light
-$color-grey-20:                   tint($color-brand-tertiary, 80%);
-$color-grey-30:                   tint($color-brand-tertiary, 70%);
-$color-grey-40:                   tint($color-brand-tertiary, 60%);
-$color-grey-50:                   tint($color-brand-tertiary, 50%);
-$color-grey-60:                   tint($color-brand-tertiary, 40%);
-$color-grey-70:                   tint($color-brand-tertiary, 30%);
-$color-grey-80:                   tint($color-brand-tertiary, 20%);
-$color-grey-90:                   tint($color-brand-tertiary, 10%);
-$color-grey-100:                  tint($color-brand-tertiary, 0%);  // Dark
+$color-grey-10:                   tint($color-brand-primary, 90%); // Light
+$color-grey-20:                   tint($color-brand-primary, 80%);
+$color-grey-30:                   tint($color-brand-primary, 70%);
+$color-grey-40:                   tint($color-brand-primary, 60%);
+$color-grey-50:                   tint($color-brand-primary, 50%);
+$color-grey-60:                   tint($color-brand-primary, 40%);
+$color-grey-70:                   tint($color-brand-primary, 30%);
+$color-grey-80:                   tint($color-brand-primary, 20%);
+$color-grey-90:                   tint($color-brand-primary, 10%);
+$color-grey-100:                  tint($color-brand-primary, 0%);  // Dark
 
 @include cc($color-grey-10, 'color-grey-10');
 @include cc($color-grey-20, 'color-grey-20');
@@ -319,9 +319,9 @@ $color-border-strong:             $color-grey-30;
  */
 
 $color-message-default:           #eeeeee;
-$color-message-success:           #00a664;
-$color-message-warning:           #ffcb05;
-$color-message-danger:            #f04e3e;
+$color-message-success:           #76897f;
+$color-message-warning:           #d6b38b;
+$color-message-danger:            #F9693E;
 
 @include cc($color-message-default, 'color-message-default');
 @include cc($color-message-success, 'color-message-success');
@@ -335,7 +335,7 @@ $color-message-danger:            #f04e3e;
 
 $color-input-regular:             $color-border-strong;
 $color-input-focus:               $color-brand-primary;
-$color-input-success:             #00a664;
+$color-input-success:             $color-message-success;
 $color-input-error:               $color-message-danger;
 $color-input-required:            mix($color-message-danger, #000, 75%);
 $color-input-checkbox:            $color-border-strong;
@@ -384,6 +384,6 @@ $color-text-paragraph:            $color-text;
  * Explicit colors
  */
 
-$color-explicit-red:              #ed1c24;
-$color-explicit-green:            #00a651;
-$color-explicit-blue:             #034ea2;
+$color-explicit-red:              #F9693E;
+$color-explicit-green:            #76897f;
+$color-explicit-blue:             #8c9eab;
