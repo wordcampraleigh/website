@@ -323,7 +323,7 @@
     &:hover > .sub-menu,
     &.focus > .sub-menu {
 
-      left: 0;
+      left: -2px;
 
     }
 
@@ -433,4 +433,12 @@
 
 .page-navigation-container li {
     float: none;
+
+    ul ul {
+      top: 3.95em;
+
+      a {
+        width: auto;
+      }
+    }
 }
