@@ -62,7 +62,7 @@
     height: 380px;
     left: 50%;
     top: 40%;
-    transform: translate3d(-50%,-50%,0);
+    transform: translate3d(-50%,-30%,0);
     background-image: none;
 
     &::after {
@@ -79,6 +79,10 @@
       background-size: 100%;
       content: "";
 
+    }
+
+    .home & {
+    transform: translate3d(-50%,-50%,0);
     }
 
   }

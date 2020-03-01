@@ -18,6 +18,8 @@
 
 h1.entry-title {
 
+  position: relative;
+
   font-size: ms(6);
   line-height: ms(1);
 
@@ -27,7 +29,7 @@ h1.entry-title {
 
   text-align: center;
 
-  &::before {
+  &::after {
 
     position: absolute;
     top: 0;
