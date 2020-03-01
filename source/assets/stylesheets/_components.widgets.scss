@@ -17,6 +17,8 @@
   font-size: ms(6);
   line-height: ms(1);
 
+  color: $color-text-weak-invert;
+
   padding-top: 0.5em;
 
   text-align: center;
@@ -70,7 +72,7 @@
 
   @include container-padding(0);
 
-  background-color: tint($color-brand-tertiary, 80%);
+  background-color: $color-brand-quaternary;
 
   &::before {
 
@@ -85,7 +87,7 @@
 
     content: "";
 
-    background-color: tint($color-brand-tertiary, 80%) !important;
+    background-color: $color-brand-quaternary !important;
 
   }
 
