@@ -217,7 +217,9 @@
 $color-brand-primary:             #756F6D;
 $color-brand-secondary:           #577B94;
 $color-brand-tertiary:            #A8C4B5;
+$color-brand-tertiary-a11y:       #657C6F;
 $color-brand-quaternary:          #B89262;
+$color-brand-quaternary:          #9C6D3C;
 
 @include cc($color-brand-primary, 'color-brand-primary');
 @include cc($color-brand-secondary, 'color-brand-secondary');
@@ -373,10 +375,10 @@ $color-button-inactive:           #eeeeee;
  * Helper colors
  */
 
-$color-text-heading-1:            $color-brand-tertiary;
-$color-text-heading-2:            $color-text-strong;
+$color-text-heading-1:            $color-brand-tertiary-a11y;
+$color-text-heading-2:            $color-text-weak;
 $color-text-heading-3:            $color-text-strong;
-$color-text-heading-4:            $color-text-strong;
+$color-text-heading-4:            $color-text;
 $color-text-paragraph:            $color-text;
 
 

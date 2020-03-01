@@ -36,7 +36,19 @@ dl {
 // Style guide: 4.lists.ordered
 
 ol {
+  list-style: none;
+  counter-reset: custom-ol-counter;
+  padding: 0;
 
+  li {
+    counter-increment: custom-ol-counter;
+
+    &::before {
+      content: "0" counter(custom-ol-counter);
+      font-family: $font-headline;
+      font-size: 3rem;
+    }
+  }
 }
 
 // Unordered
@@ -54,8 +66,15 @@ ol {
 // Style guide: 4.lists.unordered
 
 ul {
+  list-style: none;
+  padding: 0;
 
-
+  li::before {
+    content: "\06DE";
+    font-family: $helvetica;
+    position: relative;
+    top: 0.4rem;
+  }
 }
 
 /*
@@ -66,13 +85,18 @@ li {
 
   // @extend p;
 
+  display: flex;
   margin-top: rem(4);
-  margin-bottom: 0;
+  margin-bottom: 0.5rem;
 
   &:first-child {
-
     margin-top: 0;
+  }
 
+  &::before {
+    color: $color-brand-primary;
+    margin-right: 0.5rem;
+    line-height: 1;
   }
 
 }
