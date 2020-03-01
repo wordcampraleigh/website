@@ -431,14 +431,16 @@
 
 }
 
-.page-navigation-container li {
+.page-navigation-container {
+  li {
     float: none;
+  }
 
-    ul ul {
-      top: 3.95em;
+  ul ul {
+    top: 3.95em;
 
-      a {
-        width: auto;
-      }
+    a {
+      width: auto;
     }
+  }
 }
