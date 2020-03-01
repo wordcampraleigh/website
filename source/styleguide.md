@@ -1,6 +1,6 @@
-# WordCamp [Name] [Year]
+# WordCamp Raleigh 2020
 
-Style guide for the WordCamp [Name] [Year] theme
+Style guide for the WordCamp Raleigh 2020 theme
 
 ## Style guide
 
