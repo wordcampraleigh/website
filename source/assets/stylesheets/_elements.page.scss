@@ -16,6 +16,38 @@
 //
 // Style guide: 4.page.paragraph
 
+h1.entry-title {
+
+  font-size: ms(6);
+  line-height: ms(1);
+
+  color: $color-text;
+
+  padding-top: 0.5em;
+
+  text-align: center;
+
+  &::before {
+
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: -1000px;
+    right: -1000px;
+    z-index: 0;
+
+    background-color: inherit;
+
+    content: "";
+
+    background-color: tint($color-brand-tertiary, 80%) !important;
+
+    border-bottom: 6px double $color-border-normal;
+
+  }
+
+}
+
 p {
 
   margin-top: 0;
