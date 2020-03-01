@@ -28,3 +28,20 @@ figcaption {
   color: $color-text-weak;
 
 }
+
+.wordcamp-image__avatar-container {
+  img {
+
+    border: rem(2) solid $color-brand-primary;
+    filter: sepia(1) saturate(0.4);
+    @include transition-fast();
+
+    &:hover {
+
+      transform: scale(1.1);
+      filter: sepia(0) saturate(1);
+
+    }
+    
+  }
+}

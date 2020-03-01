@@ -9,15 +9,32 @@
 //
 // Style guide: 6.organizers
 
-.wcorg-organizers {
+.wcorg-organizers, .wordcamp-organizers {
 
   padding-bottom: $unit-default;
   margin-bottom: $unit-default;
+  margin-left: 0;
+  padding-left: 0;
   border-bottom: 6px double $color-border-weak;
+
+  & > li {
+    &::before {
+      display: none;
+    }
+  }
+
+  &__title, h2 {
+
+    margin-left: 6rem;
+    margin-bottom: $unit-s;
+    font-size: ms(1);
+    font-family: $font-headline;
+
+  }
 
 }
 
-.wcorg-organizer {
+.wcorg-organizer, .wordcamp-organizer {
 
   max-width: 40em;
   margin-bottom: $unit-l;
@@ -25,15 +42,6 @@
   &:last-child {
 
     margin-bottom: 0;
-
-  }
-
-  h2 {
-
-    margin-left: 6rem;
-    margin-bottom: $unit-s;
-    font-size: ms(1);
-    font-family: $font-headline;
 
   }
 
@@ -59,7 +67,7 @@
 
   }
 
-  .avatar {
+  .avatar, .wordcamp-image__avatar-container {
 
     float: left;
     margin-left: -(rem(64));
