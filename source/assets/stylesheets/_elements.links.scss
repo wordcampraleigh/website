@@ -18,7 +18,7 @@ a {
 
   color: $color-text;
   text-decoration: none;
-  background-position-y: 100%;
+  background-position: 0 100%;
   background-image: linear-gradient( transparent 50%, $color-brand-quaternary-light 50%);
   transition: background 500ms ease;
   background-size: 6px;
@@ -29,6 +29,7 @@ a {
 
   &:hover, &:focus, &:active {
 
+    color: $color-text;
     background-size: auto 200%;
 
   }
