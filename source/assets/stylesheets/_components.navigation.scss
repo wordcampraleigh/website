@@ -111,20 +111,22 @@
 .main-navigation {
 
   position: relative;
+  border-top: 2px solid $color-border-normal;
+  border-bottom: 2px solid $color-border-normal;
 
-  &:before {
-
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-
-    height: rem(2);
-    background-color: $color-link;
-
-    content: "";
-
-  }
+  // &:before {
+  //
+  //   position: absolute;
+  //   top: 0;
+  //   left: 0;
+  //   right: 0;
+  //
+  //   height: rem(2);
+  //   background-color: $color-link;
+  //
+  //   content: "";
+  //
+  // }
 
   @include breakpoint(to-small) {
 
@@ -152,6 +154,7 @@
   @include breakpoint(small) {
 
     display: block;
+    font-size: 0;
 
   }
 
@@ -177,21 +180,29 @@
 
   margin: 0;
   display: block;
+  border-left: 2px solid $color-border-normal;
 
   font-family: $font-headline;
   font-size: ms(0);
   font-weight: $bold;
   text-align: left;
 
+  &::before {
+    display: none;
+  }
+
   @include breakpoint(small) {
 
-    margin: 0 rem(1);
     display: inline-block;
 
     @include font-size(18);
     line-height: em(24,18);
     text-align: center;
 
+  }
+
+  &:last-child {
+    border-right: 2px solid $color-border-normal;
   }
 
 }
@@ -202,6 +213,8 @@
   color: $color-link;
   padding: $unit-xs $unit-s;
 
+  background-image: none;
+
   text-decoration: none;
   transition: all .1s ease;
 
@@ -211,7 +224,7 @@
   &.focus {
 
     color: $color-text-strong;
-    background-color: $color-link-hover;
+    background-color: rgba($color-brand-tertiary, .6);
 
   }
 
@@ -258,19 +271,28 @@
 
       &:after {
 
-        position: relative;
-        top: -(rem(2));
-
-        display: inline-block;
-        border: rem(6) solid transparent;
-        margin-left: $unit-xs;
-
-        vertical-align: middle;
-
-        border-top-color: $color-link;
+        // position: relative;
+        // top: -(rem(2));
+        //
+        // display: inline-block;
+        // border: rem(6) solid transparent;
+        // margin-left: $unit-xs;
+        //
+        // vertical-align: middle;
+        //
+        // border-top-color: $color-link;
 
         content: "";
 
+        display: inline-block;
+        margin-left: .5em;
+        vertical-align: .255em;
+        border-style: solid;
+        border-width: 2px 0 0 2px;
+        height: 7px;
+        width: 7px;
+        transform: rotate(225deg);
+        transform-origin: center;
       }
 
     }
@@ -287,7 +309,7 @@
     &.focus > a {
 
       color: $color-text-strong;
-      background-color: $color-link;
+      // background-color: $color-link;
 
       &:after {
 
@@ -322,7 +344,6 @@
 
     text-transform: none;
     font-weight: $regular;
-    font-family: $font-body;
 
   }
 
@@ -358,15 +379,20 @@
 
     min-width: rem(260);
 
-    background-color: $color-link;
+    background-color: tint($color-brand-tertiary, 70%);
 
     .menu-item {
 
       width: 100%;
       margin: 0;
-      border-top: 1px solid rgba(255,255,255,.2);
+      border-top: 2px solid $color-border-normal;
+      border-right: 2px solid $color-border-normal;
 
       text-align: left;
+
+      &:last-child {
+        border-bottom: 2px solid $color-border-normal;
+      }
 
     }
 
