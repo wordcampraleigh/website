@@ -45,7 +45,7 @@
 
   }
 
-  .wcorg-organizer-description {
+  .wcorg-organizer-description, .wordcamp-organizers__content {
 
     padding-left: rem(64);
     min-height: rem(48);
@@ -67,7 +67,14 @@
 
   }
 
-  .avatar, .wordcamp-image__avatar-container {
+  .wordcamp-image__avatar-container {
+    float: left;
+    margin-left: -(rem(64));
+    margin-top: -2.5rem;
+    width: rem(48);
+  }
+
+  .avatar {
 
     float: left;
     margin-left: -(rem(64));
