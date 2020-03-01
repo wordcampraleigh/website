@@ -45,10 +45,10 @@ $site-logo-path:                url('https://s.w.org/about/images/logos/wordpres
 // $site-logo-path:                url('https://2017.europe.wordcamp.org/files/2016/11/logo-wceu17-dark-icon.png'); // Logo image
 
 /* Hero */
-$site-hero-path-small:          url('https://c2.staticflickr.com/8/7342/27927265956_6755e5913e_b.jpg'); // Background image
-$site-hero-path-large:          url('https://c2.staticflickr.com/8/7342/27927265956_e66b460cbe_o.jpg'); // Background image
+$site-hero-path-small:          url('https://2020.raleigh.wordcamp.org/files/2020/03/raleigh-futurism-2020.jpg'); // Background image
+$site-hero-path-large:          url('https://2020.raleigh.wordcamp.org/files/2020/03/raleigh-futurism-2020.jpg'); // Background image
 $site-hero-background:          tint($color-brand-secondary, 90%); // Hero color background
-$site-hero-overlay:             .8; // Image overlay color opacity
+$site-hero-overlay:             0; // Image overlay color opacity
 
 /* Media queries */
 $extra-small-value:             24em; // 384px
