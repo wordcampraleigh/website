@@ -5,18 +5,18 @@
  */
 
 /* Define basic variables and colors */
-$styleguide-color-main: #FF9505;
-$styleguide-color-link: #EC4E20;
-$styleguide-color-link-alt: red;
-$styleguide-color-weak: rgba(0,0,0,.7);
-$styleguide-color-strong: rgba(0,0,0,.9);
+$styleguide-color-main: $color-brand-tertiary;
+$styleguide-color-link: $color-brand-secondary;
+$styleguide-color-link-alt: $color-brand-quaternary;
+$styleguide-color-weak: $color-text-weak;
+$styleguide-color-strong: $color-text-strong;
 $styleguide-border-radius-small: 3px;
 
 .kss-doc-title {
 
   margin-bottom: rem(24);
 
-  @include font-size(18);
+  @include font-size(24);
   line-height: 1.5;
   color: $styleguide-color-strong;
   text-transform: none;
@@ -30,6 +30,7 @@ $styleguide-border-radius-small: 3px;
   @include container-padding(1);
 
   background-color: tint($styleguide-color-main, 90%);
+  border-right: 1px solid $color-text;
 
   @include breakpoint(medium) {
 
@@ -42,7 +43,7 @@ $styleguide-border-radius-small: 3px;
     width: rem(360);
     min-height: 100vh;
     height: 400px;
-    overflow-y: scroll;
+    overflow-y: auto;
 
   }
 
@@ -66,7 +67,7 @@ $styleguide-border-radius-small: 3px;
 
   overflow: hidden;
 
-  border-bottom: 1px solid rgba(0,0,0,.1);
+  border-bottom: 1px solid $color-border-normal;
   background-color: #fff;
 
   &:last-child {
@@ -112,7 +113,7 @@ $styleguide-border-radius-small: 3px;
 
     @include font-size(16);
     line-height: 1.5;
-    font-family: $helvetica;
+    font-family: $font-brand-secondary;
     font-weight: $bold;
     color: #444;
     text-transform: none;
@@ -154,7 +155,7 @@ $styleguide-border-radius-small: 3px;
     @include font-size(16);
     line-height: 1.5;
     font-weight: $bold;
-    font-family: $helvetica;
+    font-family: $font-brand-secondary;
     color: rgba(0,0,0,.9);
 
     border-left: 4px solid $styleguide-color-main;
@@ -194,7 +195,7 @@ $styleguide-border-radius-small: 3px;
     @include font-size(14);
     line-height: 1.5;
     font-weight: $bold;
-    font-family: $helvetica;
+    font-family: $font-brand-secondary;
     color: rgba(0,0,0,.9);
 
   }
@@ -206,7 +207,7 @@ $styleguide-border-radius-small: 3px;
     @include font-size(14);
     line-height: 1.5;
     font-weight: $regular;
-    font-family: $helvetica;
+    font-family: $font-brand-secondary;
     color: rgba(0,0,0,.7);
 
   }
@@ -270,7 +271,7 @@ $styleguide-border-radius-small: 3px;
   > p,
   > ul li {
 
-    font-family: $helvetica;
+    font-family: $font-brand-primary;
     @include font-size(16);
     line-height: 1.5;
     color: #444;
@@ -304,8 +305,9 @@ $styleguide-border-radius-small: 3px;
 
     margin: 0;
 
-    border-top: 1px solid rgba(0,0,0,.05);
+    border-top: 1px solid $color-border-weak;
 
+    font-family: $font-brand-secondary;
     @include font-size(16);
     line-height: 1.5;
     font-weight: bold;

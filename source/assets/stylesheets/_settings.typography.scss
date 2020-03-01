@@ -5,9 +5,9 @@
 //
 // Write about your typography choices for this WordCamp.
 //
-// **Typeface Name** is used as the font for WordCamp logo and for all headlines.
+// **Abel** is used as the font for WordCamp logo and for all headlines.
 //
-// **Typeface Name** is used for body text, buttons, forms etc.
+// **Libre Franklin** is used for body text, buttons, forms etc.
 //
 // Style guide: 1.typography
 
@@ -16,8 +16,8 @@ $ms-base: 1em;
 $ms-ratio: 1.25;
 
 /* Fonts */
-$font-brand-primary:              $helvetica;
-$font-brand-secondary:            $helvetica;
+$font-brand-primary:              "Libre Franklin", sans-serif;
+$font-brand-secondary:            "Abel", sans-serif;
 
 /* Font use case */
 $font-body:                       $font-brand-primary;

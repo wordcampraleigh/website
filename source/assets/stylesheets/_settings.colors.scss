@@ -215,7 +215,7 @@
 /* Brand */
 
 $color-brand-primary:             #756F6D;
-$color-brand-secondary:           #8c9eab;
+$color-brand-secondary:           #577B94;
 $color-brand-tertiary:            #A8C4B5;
 $color-brand-quaternary:          #B89262;
 
@@ -305,9 +305,9 @@ $color-grey-100:                  tint($color-brand-primary, 0%);  // Dark
  * Border
  */
 
-$color-border-weak:               $color-grey-10;
-$color-border-normal:             $color-grey-20;
-$color-border-strong:             $color-grey-30;
+$color-border-weak:               $color-text-weak;
+$color-border-normal:             $color-text;
+$color-border-strong:             $color-text-strong;
 
 @include cc($color-border-weak, 'color-border-weak');
 @include cc($color-border-normal, 'color-border-normal');
@@ -318,10 +318,10 @@ $color-border-strong:             $color-grey-30;
  * Messages
  */
 
-$color-message-default:           #eeeeee;
-$color-message-success:           #76897f;
-$color-message-warning:           #d6b38b;
-$color-message-danger:            #F9693E;
+$color-message-default:           $color-grey-10;
+$color-message-success:           #657C6F;
+$color-message-warning:           #9C6D3C;
+$color-message-danger:            #C1572B;
 
 @include cc($color-message-default, 'color-message-default');
 @include cc($color-message-success, 'color-message-success');
@@ -384,6 +384,6 @@ $color-text-paragraph:            $color-text;
  * Explicit colors
  */
 
-$color-explicit-red:              #F9693E;
-$color-explicit-green:            #76897f;
-$color-explicit-blue:             #8c9eab;
+$color-explicit-red:              #C1572B;
+$color-explicit-green:            #657C6F;
+$color-explicit-blue:             #577B94;
