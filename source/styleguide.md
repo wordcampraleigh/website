@@ -23,8 +23,8 @@ WordCamp header. Read more about [colors](section-1.html#kssref-1-colors) and [f
 
 <header id="masthead" class="site-header" role="banner">
   <div class="site-branding">
-    <p class="site-title"><a href="#" rel="home">WordCamp Name</a></p>
-    <p class="site-description">City, Country – Month, Date, Year.</p>
+    <p class="site-title"><a href="#" rel="home">WordCamp Raleigh</a></p>
+    <p class="site-description">Raleigh, North Carolina – June 13-14, 2020.</p>
   </div><!-- .site-branding -->
   <!-- #site-navigation -->
 </header><!-- #masthead -->
